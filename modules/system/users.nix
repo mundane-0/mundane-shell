@@ -2,7 +2,7 @@
 #
 # Le mot de passe n'est PAS dans Nix (mutableUsers=true) : l'installateur le
 # pose via chpasswd après nixos-install, et les rebuilds n'y touchent jamais.
-{ config, lib, ... }:
+{ config, lib, spicetifyModule, ... }:
 with lib;
 let
   cfg = config.mundane;
