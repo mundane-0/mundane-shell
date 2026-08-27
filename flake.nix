@@ -37,13 +37,14 @@
             # Permet aux modules de référencer le flake (ex: versionner la
             # config quickshell depuis self) sans chemin relatif fragile.
             mundane-self = self;
-            # Paquets spicetify-nix (thèmes/extensions), redonnés à Home-Manager.
+            # Paquets spicetify-nix (thèmes/extensions) + module HM, donnés à
+            # Home-Manager via extraSpecialArgs (voir modules/system/users.nix).
             spicePkgs = spicetify-nix.legacyPackages.${system};
+            spicetifyModule = spicetify-nix.homeManagerModules.default;
           };
           modules = [
             path
             home-manager.nixosModules.home-manager
-            spicetify-nix.homeManagerModules.default
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
