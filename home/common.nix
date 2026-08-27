@@ -22,7 +22,6 @@
       rollback = "sudo nixos-rebuild switch --rollback";
       snappers = "sudo snapper list";
     };
-    zoxide.enable = true;
     # Le flake courant dans l'historique du prompt.
     initContent = ''
       eval "$(starship init zsh)"
@@ -38,6 +37,8 @@
 
   programs.fzf.enable = true;
   programs.bat.enable = true;
+  programs.zoxide.enable = true;
+  programs.zoxide.enableZshIntegration = true;
 
   home.stateVersion = "25.05";
 }
