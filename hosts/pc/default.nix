@@ -5,7 +5,8 @@
   imports = [
     ./hardware-configuration.nix
     ./overrides.nix
-  ] ++ (import ../../modules);
+    ../../modules
+  ];
 
   mundane = {
     machine = "pc";

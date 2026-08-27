@@ -1,4 +1,6 @@
 # Home-Manager — applications utilisateur.
-[
-  ./spicetify.nix
-]
+{
+  imports = [
+    ./spicetify.nix
+  ];
+}

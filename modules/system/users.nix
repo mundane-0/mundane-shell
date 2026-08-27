@@ -30,7 +30,7 @@ in
   # le rollback NixOS restaure AUSSI la config home. C'est le cœur de la
   # stabilité « béton ». spicetifyModule arrive via specialArgs (flake.nix).
   home-manager.users.${cfg.username} = {
-    imports = (import ../../home) ++ [ spicetifyModule ];
+    imports = [ ../../home spicetifyModule ];
   };
 
   # Contexte Mundane passé aux modules Home-Manager (args `mundane`,
