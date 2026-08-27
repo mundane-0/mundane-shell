@@ -6,7 +6,6 @@ let
 in
 {
   config = mkIf cfg.apps.enable {
-    # Flatpak pour Zen Browser (pas dans nixpkgs) + apps système
     environment.systemPackages =
       with pkgs;
       [
@@ -32,15 +31,5 @@ in
       ++ optionals cfg.apps.spicetify [
         # Spotify est géré par Home-Manager (spicetify), on garde ça côté user.
       ];
-
-    # Flatpak remote flathub configuré en système
-    flatpak.remoteAdd = {
-      flathub = {
-        url = "https://flathub.org/repo/flathub.flatpakrepo";
-        fromSource = false;
-        system = true;
-      };
-    };
-    # L'app Zen sera installée via systemd user service (home/flatpak-setup.nix)
   };
 }
