@@ -34,8 +34,10 @@ in
         wayland.enable = true;
         theme = mkDefault "breeze";
       };
-      # La session par défaut est choisie dans SDDM ; l'autre reste 1 clic.
-      defaultSession = mkDefault "${cfg.defaultSession}";
+      # La session par défaut : source unique = mundane.defaultSession.
+      # (priorité normale pour battre le mkDefault du module nixpkgs niri ;
+      #  surchargeable par mkForce dans hosts/*/overrides.nix)
+      defaultSession = "${cfg.defaultSession}";
     };
     services.displayManager.sddm.autoLogin = mkIf cfg.autoLogin {
       enable = true;
