@@ -39,11 +39,10 @@ in
       #  surchargeable par mkForce dans hosts/*/overrides.nix)
       defaultSession = "${cfg.defaultSession}";
 
-      # Auto-login (nouvelles options unifiées, plus sous sddm.*)
+      # Auto-login (options unifiées, relogin retiré dans nixpkgs récent)
       autoLogin = mkIf cfg.autoLogin {
         enable = true;
         user = cfg.username;
-        relogin = true;
       };
     };
 
