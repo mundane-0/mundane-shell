@@ -30,7 +30,7 @@ in
   # le rollback NixOS restaure AUSSI la config home. C'est le cœur de la
   # stabilité « béton ».
   home-manager.users.${cfg.username} = {
-    imports = [ ../../home ];
+    imports = [ (import ../../home) ];
   };
 
   # Contexte Mundane passé aux modules Home-Manager (args `mundane`,
