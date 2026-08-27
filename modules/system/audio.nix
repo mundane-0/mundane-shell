@@ -13,8 +13,8 @@ with lib;
     wireplumber.enable = true;
   };
 
-  # PAS de services.pulseaudio/alsa en parallèle.
-  hardware.pulseaudio.enable = mkForce false;
+  # PAS de PulseAudio classique : PipeWire le remplace (module nixpkgs
+  # gère l'exclusivité lui-même, aucune ligne à forcer).
 
   environment.systemPackages = with pkgs; [
     pavucontrol
