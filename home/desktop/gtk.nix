@@ -1,5 +1,5 @@
 # Thème GTK/Qt clair — cohérent avec la barre Quickshell (thème.json).
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 with lib;
 {
   gtk = {
