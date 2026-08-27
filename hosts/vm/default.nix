@@ -5,7 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ./overrides.nix
-    (import ../modules)
+    (import ../../modules)
   ];
 
   mundane = {
