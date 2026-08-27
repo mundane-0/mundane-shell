@@ -38,11 +38,13 @@ in
       # (priorité normale pour battre le mkDefault du module nixpkgs niri ;
       #  surchargeable par mkForce dans hosts/*/overrides.nix)
       defaultSession = "${cfg.defaultSession}";
-    };
-    services.displayManager.sddm.autoLogin = mkIf cfg.autoLogin {
-      enable = true;
-      user = cfg.username;
-      relogin = true;
+
+      # Auto-login (nouvelles options unifiées, plus sous sddm.*)
+      autoLogin = mkIf cfg.autoLogin {
+        enable = true;
+        user = cfg.username;
+        relogin = true;
+      };
     };
 
     # —— Portails XDG (screensharing, ouverture de fichiers, OBS) ——

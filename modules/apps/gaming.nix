@@ -18,7 +18,7 @@ in
       heroic # Epic/GOG/Amazon
       lutris
       bottles # runners Windows/Wine
-      wineWowPackages.stable
+      wineWow64Packages.stable
       winetricks
       gamescope
       mangohud # overlay perf (F12)

@@ -6,12 +6,10 @@ let
 in
 {
   config = mkIf cfg.apps.enable {
+    # Flatpak pour Zen Browser (pas dans nixpkgs) + apps système
     environment.systemPackages =
       with pkgs;
       [
-        # Navigateur
-        zen-browser
-
         # IDE / éditeurs
         vscodium
         zed-editor
@@ -29,11 +27,13 @@ in
         # Fichiers
         nautilus
         file-roller
+        flatpak
       ]
       ++ optionals cfg.apps.spicetify [
         # Spotify est géré par Home-Manager (spicetify), on garde ça côté user.
       ];
 
-    # Zen par défaut pour tout le web (déclaré côté Home-Manager).
+    # Flatpak : Zen Browser (installé user-side via flatpak, voir home/apps)
+    # Navigation par défaut configurée via Home-Manager (xdg.mimeDefaults).
   };
 }
