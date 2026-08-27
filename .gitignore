@@ -1,0 +1,21 @@
+# Résidus de build Nix
+result
+result-*
+.direnv/
+.pre-commit-cache.yaml
+
+# Généré par l'installateur (hardware détecté au moment de l'install)
+# → on versionne des placeholders valides, mais on ne commit pas les
+#   regénérations accidentelles faites pendant les tests.
+hosts/*/hardware-configuration.local.nix
+
+# Secrets / artefacts locaux
+secrets/
+*.age
+*.key
+
+# Éditeurs / OS
+.envrc
+.idea/
+.vscode/
+.DS_Store

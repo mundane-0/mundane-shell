@@ -1,0 +1,12 @@
+{
+  "bg": "#F4F6F9",
+  "pillOpacity": 0.92,
+  "fg": "#1C1F26",
+  "fgSoft": "#5C6370",
+  "accent": "#6C8CFF",
+  "accentFg": "#FFFFFF",
+  "border": "#1C1F2614",
+  "fontFamily": "Inter",
+  "fontPixelSize": 13,
+  "shadow": true
+}

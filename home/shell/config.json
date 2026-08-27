@@ -1,0 +1,22 @@
+{
+  "barPosition": "top",
+  "barHeight": 46,
+  "barMargin": 10,
+  "barRadius": 22,
+  "pillSpacing": 8,
+  "showWorkspaces": true,
+  "showClock": true,
+  "showTray": true,
+  "showWeather": true,
+  "showCpu": true,
+  "showMusic": false,
+  "showLauncher": true,
+  "widgetClock": true,
+  "widgetWeather": true,
+  "widgetDraw": true,
+  "widgetScale": 1.0,
+  "weatherCity": "Paris",
+  "clockUpdateMs": 1000,
+  "cpuUpdateMs": 3000,
+  "weatherUpdateMs": 900000
+}
