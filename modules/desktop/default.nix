@@ -14,7 +14,7 @@ in
         nerd-fonts.caskaydia-cove
         nerd-fonts.symbols-only
         noto-fonts
-        noto-fonts-cjk
+        noto-fonts-cjk-sans
         noto-fonts-color-emoji
       ];
       fontconfig = {
