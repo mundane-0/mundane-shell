@@ -19,9 +19,8 @@ in
     interval = "monthly";
   };
 
+  # Le module nixpkgs s'active dès qu'une config est déclarée.
   services.snapper = mkIf isBtrfs {
-    enable = mkDefault true;
-    snapshotInterval = "hourly";
     cleanupInterval = "1d";
     configs = {
       root = {
