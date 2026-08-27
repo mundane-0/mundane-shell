@@ -2,6 +2,6 @@
 {
   imports = [
     ./spicetify.nix
-    ./flatpak.nix
+    ./flatpak-setup.nix
   ];
 }

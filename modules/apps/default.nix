@@ -33,7 +33,17 @@ in
         # Spotify est géré par Home-Manager (spicetify), on garde ça côté user.
       ];
 
-    # Flatpak : Zen Browser (installé user-side via flatpak, voir home/apps)
-    # Navigation par défaut configurée via Home-Manager (xdg.mimeDefaults).
+    # Flatpak : remote flathub + installation Zen Browser au premier login
+    flatpak = {
+      enable = true;
+      remoteAdd = {
+        flathub = {
+          url = "https://flathub.org/repo/flathub.flatpakrepo";
+          fromSource = false;
+          system = true;
+        };
+      };
+      # L'app Zen sera installée via systemd user service (home/flatpak-setup.nix)
+    };
   };
 }
